@@ -1,0 +1,4 @@
+
+# misc
+*.json
+/node_modules
