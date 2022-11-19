@@ -2,3 +2,4 @@
 # misc
 *.json
 /node_modules
+/dist

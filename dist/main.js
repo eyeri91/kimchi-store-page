@@ -1,1 +1,1 @@
-console.log("Configuring basic setup");
+console.log("It is working");
