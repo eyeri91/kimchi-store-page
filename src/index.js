@@ -10,6 +10,7 @@
 // tab title heading and the border bottom should be the same.
 
 // div # content-body
+import "./input.css";
 import { createElement } from "./utility";
 
 const contentContainer = document.getElementById("content");
