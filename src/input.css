@@ -3,3 +3,28 @@
 @tailwind utilities;
 
 /* Set content div relatve and then move tab buttons */
+:root {
+  /* Colors */
+  /* --darkest: #242423;
+  --dark: #333533;
+  --yellow: #f5cb5c;
+  --bright: #cfdbd5;
+  --brightest: #e8eddf;
+  --x-sign: rgb(248 113 113);
+  --o-sign: rgb(96 165 250); */
+
+  /* Fonts */
+  --main-font: "Roboto", sans-serif;
+}
+/* 
+#tab-btns-container {
+  position: absolute;
+  left: -1px;
+  bottom: 96px;
+  padding: 10px 20px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+#tab-btns-container > * {
+  margin: 0px 10px;
+} */

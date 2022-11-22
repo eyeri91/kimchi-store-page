@@ -18,11 +18,39 @@ const contentContainer = document.getElementById("content");
 const historyTabButton = createElement("button", "History");
 const menuTabButton = createElement("button", "Menu");
 const contactTabButton = createElement("button", "Contact");
-contentContainer.append(historyTabButton, menuTabButton, contactTabButton);
+const tabButtonsContainer = createElement("div");
+tabButtonsContainer.id = "tab-btns-container";
+tabButtonsContainer.classList.add(
+  "border",
+  "border-solid",
+  "border-yellow-900",
+  "rounded-lg",
+  "rounded-b-none",
+  "absolute",
+  "-left-[1px]",
+  "-top-[50px]"
+);
 
-const contentTitle = createElement("div", "Content title is here");
+const tabButtons = [historyTabButton, menuTabButton, contactTabButton];
+for (const button of tabButtons) {
+  tabButtonsContainer.append(button);
+  button.classList.add("m-2");
+}
+
+const contentTitle = createElement("div", "Content Title");
 contentTitle.id = "content-title";
+contentTitle.classList.add(
+  "text-2xl",
+  "border",
+  "border-solid",
+  "border-red-100"
+);
 
 const contentBodyContainer = createElement("div", "Content body is here");
 contentBodyContainer.id = "content-body";
-contentContainer.append(contentTitle, contentBodyContainer);
+
+contentContainer.append(
+  tabButtonsContainer,
+  contentTitle,
+  contentBodyContainer
+);
