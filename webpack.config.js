@@ -3,10 +3,12 @@ const path = require("path");
 module.exports = {
   mode: "development",
   entry: { index: "./src/index.js" },
-  output: "./dist/main.js",
   output: {
-    filename: "main.js",
+    filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
+  },
+  devServer: {
+    static: "./dist",
   },
   module: {
     rules: [
@@ -15,5 +17,8 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
     ],
+  },
+  optimization: {
+    runtimeChunk: "single",
   },
 };
