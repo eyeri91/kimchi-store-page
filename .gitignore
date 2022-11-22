@@ -1,0 +1,6 @@
+
+# misc
+*.json
+/node_modules
+/dist/*.js
+*.js
