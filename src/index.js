@@ -41,13 +41,15 @@ const contentTitle = createElement("div", "Content Title");
 contentTitle.id = "content-title";
 contentTitle.classList.add(
   "text-2xl",
-  "border",
+  "border-b",
   "border-solid",
-  "border-red-100"
+  "border-yellow-900",
+  "pb-1"
 );
 
 const contentBodyContainer = createElement("div", "Content body is here");
 contentBodyContainer.id = "content-body";
+contentBodyContainer.classList.add("mt-4");
 
 contentContainer.append(
   tabButtonsContainer,
