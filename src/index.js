@@ -8,8 +8,6 @@
 // div #title
 
 // div # content-body
-
-// Only active tab buttons gets border-solid and the rest will be dotted or dashed
 import "./style.css";
 import { createElement } from "./utils/utility";
 
