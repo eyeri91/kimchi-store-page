@@ -21,7 +21,7 @@ function openHistoryPage() {
     "p",
     "The history has started since 1991. The best kimchi in the town. That was the aim of the ...."
   );
-  storeHistoryParagraph.classList.add("my-3", "px-2", "max-w-fit");
+  storeHistoryParagraph.classList.add("my-3", "px-2", "w-3/4");
   contentBodyContainer.append(storeHistoryParagraph);
 }
 
