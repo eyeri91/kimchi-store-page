@@ -23,6 +23,10 @@ function openHistoryPage() {
   );
   storeHistoryParagraph.classList.add("my-3", "px-2", "w-3/4");
   contentBodyContainer.append(storeHistoryParagraph);
+
+  // Tab button styling
+  const historyTabButton = document.getElementById("history-btn");
+  historyTabButton.classList.add("history-border-bottom");
 }
 
 export default openHistoryPage;
