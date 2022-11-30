@@ -3,13 +3,12 @@
 
 // div #content
 
-//  Create buttons for each tabs.
-
 // div #title
 
 // div # content-body
 import "./style.css";
 import { createElement } from "./utils/utility";
+import openHistoryPage from "./tab_modules/history";
 
 // const styleClass = {
 //   borderColor:
@@ -55,7 +54,7 @@ contentTitle.classList.add(
   "pb-1"
 );
 
-const contentBodyContainer = createElement("div", "Content body is here");
+const contentBodyContainer = createElement("div");
 contentBodyContainer.id = "content-body";
 contentBodyContainer.classList.add("mt-4");
 
@@ -64,3 +63,5 @@ contentContainer.append(
   contentTitle,
   contentBodyContainer
 );
+
+openHistoryPage();
