@@ -5,6 +5,7 @@
 /* Set content div relatve and then move tab buttons */
 :root {
   /* Colors */
+  --cream: #fffcf2;
   --neutral: #f8edeb;
   --bright-pink: #fcd5ce;
   --rose: #ffb5a7;
@@ -13,4 +14,14 @@
 
   /* Fonts */
   --main-font: "Roboto", sans-serif;
+}
+
+.tab-buttons-container-bottom::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 1px;
+  height: 0px;
+  width: 250.5px;
+  border-top: solid 1px var(--cream);
 }
