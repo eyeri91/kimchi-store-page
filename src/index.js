@@ -8,8 +8,6 @@
 // div #title
 
 // div # content-body
-
-// Only active tab buttons gets border-solid and the rest will be dotted or dashed
 import "./style.css";
 import { createElement } from "./utils/utility";
 
@@ -51,8 +49,8 @@ const contentTitle = createElement("div", "Content Title");
 contentTitle.id = "content-title";
 contentTitle.classList.add(
   "text-2xl",
-  "border-b-2",
-  "border-dotted",
+  "border-b",
+  "border-solid",
   "border-yellow-700",
   "pb-1"
 );
