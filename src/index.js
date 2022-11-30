@@ -17,6 +17,7 @@ import openHistoryPage from "./tab_modules/history";
 const contentContainer = document.getElementById("content");
 
 const historyTabButton = createElement("button", "History");
+historyTabButton.id = "history-btn";
 const menuTabButton = createElement("button", "Menu");
 const contactTabButton = createElement("button", "Contact");
 const tabButtonsContainer = createElement("div");
@@ -33,14 +34,15 @@ const tabButtons = [historyTabButton, menuTabButton, contactTabButton];
 for (const button of tabButtons) {
   tabButtonsContainer.append(button);
   button.classList.add(
-    "mr-3",
     "py-2",
     "px-3",
     "border",
     "rounded-t-md",
     "border-solid",
     "border-yellow-700",
-    "bg-lightPink"
+    "bg-lightPink",
+    "bg-opacity-60",
+    "relative"
   );
 }
 
@@ -63,5 +65,8 @@ contentContainer.append(
   contentTitle,
   contentBodyContainer
 );
+
+// History button is clicked =>
+// History button's border bottom should get a class for
 
 openHistoryPage();

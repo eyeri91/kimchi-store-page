@@ -5,6 +5,7 @@
 /* Set content div relatve and then move tab buttons */
 :root {
   /* Colors */
+  --cream: #fffcf2;
   --neutral: #f8edeb;
   --bright-pink: #fcd5ce;
   --rose: #ffb5a7;
@@ -13,4 +14,37 @@
 
   /* Fonts */
   --main-font: "Roboto", sans-serif;
+}
+
+.history-border-bottom::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0px;
+  height: 0px;
+  width: 84px;
+  border-top: solid 2px var(--cream);
+  border-top-left-radius: 0px;
+}
+
+.menu-border-bottom::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0px;
+  height: 0px;
+  width: 84px;
+  border-top: solid 2px var(--cream);
+  border-top-left-radius: 0px;
+}
+
+.contact-border-bottom::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0px;
+  height: 0px;
+  width: 90px;
+  border-top: solid 2px var(--cream);
+  border-top-left-radius: 0px;
 }
