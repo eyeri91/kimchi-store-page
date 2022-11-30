@@ -49,8 +49,8 @@ const contentTitle = createElement("div", "Content Title");
 contentTitle.id = "content-title";
 contentTitle.classList.add(
   "text-2xl",
-  "border-b",
-  "border-solid",
+  "border-b-2",
+  "border-dotted",
   "border-yellow-700",
   "pb-1"
 );
