@@ -3,15 +3,17 @@
 
 // div #content
 
-//  div #content have same padding x and y axis.
 //  Create buttons for each tabs.
 
 // div #title
-// tab title heading and the border bottom should be the same.
 
 // div # content-body
 import "./style.css";
 import { createElement } from "./utils/utility";
+
+// const styleClass = {
+//   borderColor:
+// };
 
 const contentContainer = document.getElementById("content");
 
@@ -38,7 +40,8 @@ for (const button of tabButtons) {
     "border",
     "rounded-t-md",
     "border-solid",
-    "border-yellow-900"
+    "border-yellow-700",
+    "bg-lightPink"
   );
 }
 
@@ -48,7 +51,7 @@ contentTitle.classList.add(
   "text-2xl",
   "border-b",
   "border-solid",
-  "border-yellow-900",
+  "border-yellow-700",
   "pb-1"
 );
 

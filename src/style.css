@@ -5,13 +5,11 @@
 /* Set content div relatve and then move tab buttons */
 :root {
   /* Colors */
-  /* --darkest: #242423;
-  --dark: #333533;
-  --yellow: #f5cb5c;
-  --bright: #cfdbd5;
-  --brightest: #e8eddf;
-  --x-sign: rgb(248 113 113);
-  --o-sign: rgb(96 165 250); */
+  --neutral: #f8edeb;
+  --bright-pink: #fcd5ce;
+  --rose: #ffb5a7;
+  --bright-nude: #f9dcc4;
+  --nude: #fec89a;
 
   /* Fonts */
   --main-font: "Roboto", sans-serif;
