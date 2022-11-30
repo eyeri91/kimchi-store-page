@@ -21,9 +21,6 @@ const contactTabButton = createElement("button", "Contact");
 const tabButtonsContainer = createElement("div");
 tabButtonsContainer.id = "tab-btns-container";
 tabButtonsContainer.classList.add(
-  "border",
-  "border-solid",
-  "border-yellow-900",
   "rounded-lg",
   "rounded-b-none",
   "absolute",
@@ -34,7 +31,15 @@ tabButtonsContainer.classList.add(
 const tabButtons = [historyTabButton, menuTabButton, contactTabButton];
 for (const button of tabButtons) {
   tabButtonsContainer.append(button);
-  button.classList.add("m-2");
+  button.classList.add(
+    "mr-3",
+    "py-2",
+    "px-3",
+    "border",
+    "rounded-t-md",
+    "border-solid",
+    "border-yellow-900"
+  );
 }
 
 const contentTitle = createElement("div", "Content Title");
