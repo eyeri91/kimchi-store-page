@@ -12,7 +12,9 @@ export function makeSemiTitle(semiTitleName) {
     "border-dotted",
     "border-neutral-400",
     "pb-1/2",
-    "w-2/5"
+    "w-2/5",
+    "mb-3",
+    "mt-3"
   );
   return semiTitleCotainer;
 }
