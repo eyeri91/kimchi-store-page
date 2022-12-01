@@ -7,12 +7,12 @@ export function createElement(elementType, elementText = "") {
 export function makeSemiTitle(semiTitleName) {
   const semiTitleCotainer = createElement("div", semiTitleName);
   semiTitleCotainer.classList.add(
-    "text-md",
-    "border-b-2",
+    "text-lg",
+    "border-b",
     "border-dotted",
-    "border-yellow-700",
-    "pb-2",
-    "w-1/2"
+    "border-neutral-400",
+    "pb-1/2",
+    "w-2/5"
   );
   return semiTitleCotainer;
 }
