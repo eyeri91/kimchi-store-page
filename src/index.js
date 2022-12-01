@@ -69,8 +69,8 @@ contentContainer.append(
   contentBodyContainer
 );
 
-// History button is clicked =>
-// History button's border bottom should get a class for
+// Add a functiont to toggle
+// the bg-colors of active and inavtive tab buttons
 
 // openHistoryPage();
 openMenuPage();

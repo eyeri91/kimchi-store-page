@@ -1,4 +1,4 @@
-import { createElement } from "../utils/utility";
+import { createElement, makeSemiTitle } from "../utils/utility";
 
 function openMenuPage() {
   const contentTitle = document.getElementById("content-title");
@@ -11,6 +11,13 @@ function openMenuPage() {
     "justify-center",
     "items-center"
   );
+
+  const redKimchiTitleContainer = makeSemiTitle("Red Kimchi");
+  contentBodyContainer.append(redKimchiTitleContainer);
+  const whiteKimchiTitleContainer = makeSemiTitle("White Kimchi");
+  contentBodyContainer.append(whiteKimchiTitleContainer);
+  const otherDishesTitleContainer = makeSemiTitle("Other dishes");
+  contentBodyContainer.append(otherDishesTitleContainer);
 }
 
 export default openMenuPage;
