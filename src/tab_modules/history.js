@@ -17,10 +17,6 @@ function openHistoryPage() {
     kimchiHistoryImg,
     500
   );
-  // setTimeout(() => {
-  //   const cabbageKimchiImage1Div = document.getElementById("cabbage-0");
-  //   cabbageKimchiImage1Div.append(cabbageKimchiImage1), 0;
-  // });
   contentBodyContainer.append(kimchiImageForHistoryTab);
 
   const storeHistoryParagraph = createElement(

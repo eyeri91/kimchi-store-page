@@ -27,30 +27,39 @@ function openMenuPage() {
   cabbageKimchiTitleContainer.classList.remove("mt-3");
   contentBodyContainer.append(cabbageKimchiTitleContainer);
 
-  // Img source for cabbage kimchi
+  // Img sources for cabbage kimchi
   const cabbageKimchiImage1 = getImageSourceAndStyle(cabbageKimchi1);
   const cabbageKimchiImage2 = getImageSourceAndStyle(cabbageKimchi2);
 
   // Kimchi grid
   const cabbageKimchiGrid = createImageGrid("cabbage");
-  setTimeout(() => {
-    const cabbageKimchiImage1Div = document.getElementById("cabbage-0");
-    cabbageKimchiImage1Div.append(cabbageKimchiImage1), 0;
-  });
-  setTimeout(() => {
-    const cabbageKimchiImage2Div = document.getElementById("cabbage-1");
-    cabbageKimchiImage2Div.append(cabbageKimchiImage2);
-  });
+  findImageDivAndLoadImage("cabbage-0", cabbageKimchiImage1);
+  findImageDivAndLoadImage("cabbage-1", cabbageKimchiImage2);
+
   contentBodyContainer.append(cabbageKimchiGrid);
 
-  const otherKimchiTitleContainer = makeSemiTitle("Other Kimchi");
-  contentBodyContainer.append(otherKimchiTitleContainer);
+  // Img sources for non-cabbage kimchi
+  const nonCabbageKimchiImage1 = getImageSourceAndStyle(nonCabbageKimchi1);
+  const nonCabbageKimchiImage2 = getImageSourceAndStyle(nonCabbageKimchi2);
+
+  // Non-cabbage kimchi grid
+  const nonCabbageKimchiTitleContainer = makeSemiTitle("Other Kimchi");
+  contentBodyContainer.append(nonCabbageKimchiTitleContainer);
   const otherKimchiGrid = createImageGrid("non-cabbage");
+  findImageDivAndLoadImage("non-cabbage-0", nonCabbageKimchiImage1);
+  findImageDivAndLoadImage("non-cabbage-1", nonCabbageKimchiImage2);
   contentBodyContainer.append(otherKimchiGrid);
 
+  // Img sources for other dishes
+  const sideDishImage1 = getImageSourceAndStyle(sideDish1);
+  const sideDishImage2 = getImageSourceAndStyle(sideDish2);
+
+  // Side dishes grid
   const otherDishesTitleContainer = makeSemiTitle("Other dishes");
   contentBodyContainer.append(otherDishesTitleContainer);
   const otherDishesGrid = createImageGrid("other-dishes");
+  findImageDivAndLoadImage("other-dishes-0", sideDishImage1);
+  findImageDivAndLoadImage("other-dishes-1", sideDishImage2);
   contentBodyContainer.append(otherDishesGrid);
 }
 
@@ -69,6 +78,13 @@ function createImageGrid(menuName) {
     imageGridContainer.append(kimchiImageDiv);
   }
   return imageGridContainer;
+}
+
+function findImageDivAndLoadImage(imageDivId, img) {
+  setTimeout(() => {
+    const imageDiv = document.getElementById(imageDivId);
+    imageDiv.append(img), 0;
+  });
 }
 
 export default openMenuPage;
