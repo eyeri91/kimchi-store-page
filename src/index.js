@@ -10,6 +10,7 @@ import "./style.css";
 import { createElement } from "./utils/utility";
 import openHistoryPage from "./tab_modules/history";
 import openMenuPage from "./tab_modules/menu";
+import openContactPage from "./tab_modules/contact";
 
 // const styleClass = {
 //   borderColor:
@@ -73,4 +74,5 @@ contentContainer.append(
 // the bg-colors of active and inavtive tab buttons
 
 // openHistoryPage();
-openMenuPage();
+// openMenuPage();
+openContactPage();
