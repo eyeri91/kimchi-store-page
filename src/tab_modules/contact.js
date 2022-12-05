@@ -8,6 +8,21 @@ import dubaiImage from "../imgs/dubai.jpg";
 import seoulImage from "../imgs/seoul.jpg";
 import budapestImage from "../imgs/budapest.jpg";
 
+const branchObjectsList = [
+  {
+    title: "Dusbai",
+    image: dubaiImage,
+  },
+  {
+    title: "Seoul",
+    image: seoulImage,
+  },
+  {
+    title: "Budapest",
+    image: budapestImage,
+  },
+];
+
 function openContactPage() {
   const contentTitle = document.getElementById("content-title");
   contentTitle.textContent = "Contact";
@@ -20,20 +35,12 @@ function openContactPage() {
     "items-center"
   );
 
-  const dubaiBranchTitleContainer = makeSemiTitle("Dubai branch");
-  contentBodyContainer.append(dubaiBranchTitleContainer);
-  const dubaiBranchImage = getImageSourceAndStyle(dubaiImage, 400);
-  contentBodyContainer.append(dubaiBranchImage);
-
-  const seoulBranchTitleContainer = makeSemiTitle("Seoul Branch");
-  contentBodyContainer.append(seoulBranchTitleContainer);
-  const seoulBranchImage = getImageSourceAndStyle(seoulImage, 400);
-  contentBodyContainer.append(seoulBranchImage);
-
-  const budapestBranchTitleContainer = makeSemiTitle("Budapest Branch");
-  contentBodyContainer.append(budapestBranchTitleContainer);
-  const budapestBranchImage = getImageSourceAndStyle(budapestImage, 400);
-  contentBodyContainer.append(budapestBranchImage);
+  for (const branch of branchObjectsList) {
+    const branchDiv = makeSemiTitle(`${branch.title} ` + "Branch");
+    contentBodyContainer.append(branchDiv);
+    const branchImage = getImageSourceAndStyle(branch.image, 400);
+    contentBodyContainer.append(branchImage);
+  }
 }
 
 export default openContactPage;
