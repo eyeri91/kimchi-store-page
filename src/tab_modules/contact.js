@@ -12,22 +12,22 @@ const branchObjectsList = [
   {
     title: "Dubai",
     image: dubaiImage,
-    location: "Blah",
-    phone: "number",
+    location: "SZR, Dubai, United Arab Emirates",
+    phone: "123-1234-1234",
     email: "dubai_kimchi@mkbty.com",
   },
   {
     title: "Seoul",
     image: seoulImage,
-    location: "Blah",
-    phone: "number",
+    location: "Myeong-dong, Seoul, South Korea",
+    phone: "456-4567-4567",
     email: "seoul_kimchi@mkbty.com",
   },
   {
     title: "Budapest",
     image: budapestImage,
     location: "Blah",
-    phone: "number",
+    phone: "Budapest, Hungary",
     email: "budapest_kimchi@mkbty.com",
   },
 ];
@@ -50,7 +50,7 @@ function openContactPage() {
     const branchImage = getImageSourceAndStyle(branch.image, 400);
     contentBodyContainer.append(branchImage);
 
-    const branchDetailsDiv = createElement("div", "");
+    const branchDetailsDiv = createElement("div");
     contentBodyContainer.append(branchDetailsDiv);
     branchDetailsDiv.classList.add(
       "text-left",
