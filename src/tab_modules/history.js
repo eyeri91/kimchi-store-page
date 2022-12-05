@@ -1,5 +1,6 @@
-import { createElement } from "../utils/utility";
+import { createElement, getImageSourceAndStyle } from "../utils/utility";
 import kimchiHistoryImg from "../imgs/kimchi-history.jpg";
+
 function openHistoryPage() {
   const contentTitle = document.getElementById("content-title");
   contentTitle.textContent = "History";
@@ -11,10 +12,15 @@ function openHistoryPage() {
     "justify-center",
     "items-center"
   );
-  const kimchiImageForHistoryTab = new Image();
-  kimchiImageForHistoryTab.src = kimchiHistoryImg;
-  kimchiImageForHistoryTab.setAttribute("width", 400);
-  kimchiImageForHistoryTab.classList.add("rounded-sm", "my-2");
+
+  const kimchiImageForHistoryTab = getImageSourceAndStyle(
+    kimchiHistoryImg,
+    500
+  );
+  // setTimeout(() => {
+  //   const cabbageKimchiImage1Div = document.getElementById("cabbage-0");
+  //   cabbageKimchiImage1Div.append(cabbageKimchiImage1), 0;
+  // });
   contentBodyContainer.append(kimchiImageForHistoryTab);
 
   const storeHistoryParagraph = createElement(

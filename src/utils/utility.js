@@ -18,3 +18,11 @@ export function makeSemiTitle(semiTitleName) {
   );
   return semiTitleCotainer;
 }
+
+export function getImageSourceAndStyle(imgSource, width = 300) {
+  const imgElement = new Image();
+  imgElement.src = imgSource;
+  imgElement.setAttribute("width", width);
+  imgElement.classList.add("rounded-sm", "my-2");
+  return imgElement;
+}
