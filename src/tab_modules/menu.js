@@ -11,6 +11,10 @@ import nonCabbageKimchi2 from "../imgs/non-cab-pakimchi.jpg";
 import sideDish1 from "../imgs/side-veggi.jpg";
 import sideDish2 from "../imgs/side-non-veggi.jpg";
 
+const cabbageKimchiList = ["Baechu kimchi", "Dongchimi"];
+const nonCabbageKimchiList = ["Kkakdugi", "Pa-kimchi"];
+const otherDishesList = ["Vegetarian", "Non-vegetarian"];
+
 function openMenuPage() {
   const contentTitle = document.getElementById("content-title");
   contentTitle.textContent = " Menu";
@@ -32,7 +36,7 @@ function openMenuPage() {
   const cabbageKimchiImage2 = getImageSourceAndStyle(cabbageKimchi2);
 
   // Kimchi grid
-  const cabbageKimchiGrid = createImageGrid("cabbage");
+  const cabbageKimchiGrid = createImageGrid("cabbage", cabbageKimchiList);
   findImageDivAndLoadImage("cabbage-0", cabbageKimchiImage1);
   findImageDivAndLoadImage("cabbage-1", cabbageKimchiImage2);
 
@@ -45,7 +49,7 @@ function openMenuPage() {
   // Non-cabbage kimchi grid
   const nonCabbageKimchiTitleContainer = makeSemiTitle("Other Kimchi");
   contentBodyContainer.append(nonCabbageKimchiTitleContainer);
-  const otherKimchiGrid = createImageGrid("non-cabbage");
+  const otherKimchiGrid = createImageGrid("non-cabbage", nonCabbageKimchiList);
   findImageDivAndLoadImage("non-cabbage-0", nonCabbageKimchiImage1);
   findImageDivAndLoadImage("non-cabbage-1", nonCabbageKimchiImage2);
   contentBodyContainer.append(otherKimchiGrid);
@@ -57,13 +61,13 @@ function openMenuPage() {
   // Side dishes grid
   const otherDishesTitleContainer = makeSemiTitle("Other dishes");
   contentBodyContainer.append(otherDishesTitleContainer);
-  const otherDishesGrid = createImageGrid("other-dishes");
+  const otherDishesGrid = createImageGrid("other-dishes", otherDishesList);
   findImageDivAndLoadImage("other-dishes-0", sideDishImage1);
   findImageDivAndLoadImage("other-dishes-1", sideDishImage2);
   contentBodyContainer.append(otherDishesGrid);
 }
 
-function createImageGrid(menuName) {
+function createImageGrid(menuCategory, menuList) {
   const imageGridContainer = createElement("div");
   imageGridContainer.classList.add(
     "grid",
@@ -74,7 +78,8 @@ function createImageGrid(menuName) {
 
   for (let i = 0; i < 2; i++) {
     const kimchiImageDiv = createElement("div");
-    kimchiImageDiv.id = `${menuName}-${i}`;
+    kimchiImageDiv.id = `${menuCategory}-${i}`;
+    kimchiImageDiv.textContent = menuList[i];
     imageGridContainer.append(kimchiImageDiv);
   }
   return imageGridContainer;
