@@ -58,7 +58,8 @@ function openContactPage() {
       "pt-1",
       "rounded-md",
       "bg-gray",
-      "w-[400px]"
+      "w-[400px]",
+      "my-3"
     );
     const branchDetailsHeading = createElement("h", branch.title);
     branchDetailsHeading.classList.add("text-xl", "pb-2");
