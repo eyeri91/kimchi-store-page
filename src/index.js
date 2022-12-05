@@ -9,6 +9,7 @@
 import "./style.css";
 import { createElement } from "./utils/utility";
 import openHistoryPage from "./tab_modules/history";
+import openMenuPage from "./tab_modules/menu";
 
 // const styleClass = {
 //   borderColor:
@@ -17,8 +18,11 @@ import openHistoryPage from "./tab_modules/history";
 const contentContainer = document.getElementById("content");
 
 const historyTabButton = createElement("button", "History");
+historyTabButton.id = "history-tab-btn";
 const menuTabButton = createElement("button", "Menu");
+menuTabButton.id = "menu-tab-btn";
 const contactTabButton = createElement("button", "Contact");
+contactTabButton.id = "contact-tab-btn";
 const tabButtonsContainer = createElement("div");
 tabButtonsContainer.id = "tab-btns-container";
 tabButtonsContainer.classList.add(
@@ -26,21 +30,22 @@ tabButtonsContainer.classList.add(
   "rounded-b-none",
   "absolute",
   "-left-[1px]",
-  "-top-[50px]"
+  "-top-[50px]",
+  "tab-buttons-container-bottom"
 );
 
 const tabButtons = [historyTabButton, menuTabButton, contactTabButton];
 for (const button of tabButtons) {
   tabButtonsContainer.append(button);
   button.classList.add(
-    "mr-3",
     "py-2",
     "px-3",
     "border",
     "rounded-t-md",
     "border-solid",
     "border-yellow-700",
-    "bg-lightPink"
+    "bg-lightPink",
+    "bg-opacity-60"
   );
 }
 
@@ -64,4 +69,8 @@ contentContainer.append(
   contentBodyContainer
 );
 
-openHistoryPage();
+// Add a functiont to toggle
+// the bg-colors of active and inavtive tab buttons
+
+// openHistoryPage();
+openMenuPage();
