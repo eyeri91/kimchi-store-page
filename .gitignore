@@ -2,6 +2,5 @@
 # misc
 /node_modules
 /dist
-src/imgs
 
 !/dist/index.html
