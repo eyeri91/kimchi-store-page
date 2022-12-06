@@ -1,7 +1,5 @@
 
 # misc
-*.json
 /node_modules
-*config.js
-/dist
-src/imgs
+/dist/*
+!/dist/index.html
