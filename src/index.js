@@ -69,6 +69,18 @@ contentContainer.append(
   contentBodyContainer
 );
 
+// # Apply currying to common functions for all tabs.
+// const updateElementText = (id) => (text) =>
+//   (document.getElementById(id).textContent = text);
+
+// const updateContenTitleTextContent = updateElementText('content-title');
+// updateContenTitleTextContent('History')
+
+// const addClassToElement =
+//   (selector) =>
+//   (...classes) =>
+//     document.querySelector(selector).classList.add(...classes);
+
 // Add a functiont to toggle
 // the bg-colors of active and inavtive tab buttons
 
