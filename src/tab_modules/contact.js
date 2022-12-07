@@ -58,7 +58,7 @@ function openContactPage() {
       "pt-1",
       "rounded-md",
       "bg-gray",
-      "w-[400px]",
+      "sm:w-[400px]",
       "my-3"
     );
     const branchDetailsHeading = createElement("h", branch.title);
