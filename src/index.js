@@ -42,6 +42,12 @@ const removeAllChildNodes = (id) => () => {
 
 const removeAllChildNodesOfContentBody = removeAllChildNodes("content-body");
 
+// # Apply currying to common functions for all tabs.
+const updateElementText = (id) => (text) =>
+  (document.getElementById(id).textContent = text);
+
+const updateContenTitleTextContent = updateElementText("content-title");
+
 const contentTitle = createElement("div", "Content Title");
 contentTitle.id = "content-title";
 contentTitle.classList.add(
@@ -80,6 +86,7 @@ for (const tabButtonObject of tabButtonObjectsList) {
   // Add event handlers to each tab button.
   tabButton.addEventListener("click", () => {
     removeAllChildNodesOfContentBody();
+    updateContenTitleTextContent(tabButtonObject.buttonText);
     tabButtonObject.connectedPage();
   });
 }
@@ -108,7 +115,6 @@ for (const tabButtonObject of tabButtonObjectsList) {
 
 // Add a function to open each tab and wipe out
 // Call updateElementText to update content Title.
-// the current contents and run the correct tab module.
 
 openHistoryPage();
 // openMenuPage();
