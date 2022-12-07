@@ -1,29 +1,29 @@
-// Add a function to open each tab and wipe out
-// the current contents and run the correct tab module.
-
-// div #content
-
-// div #title
-
-// div # content-body
 import "./style.css";
 import { createElement } from "./utils/utility";
 import openHistoryPage from "./tab_modules/history";
 import openMenuPage from "./tab_modules/menu";
 import openContactPage from "./tab_modules/contact";
 
-// const styleClass = {
-//   borderColor:
-// };
-
 const contentContainer = document.getElementById("content");
 
-const historyTabButton = createElement("button", "History");
-historyTabButton.id = "history-tab-btn";
-const menuTabButton = createElement("button", "Menu");
-menuTabButton.id = "menu-tab-btn";
-const contactTabButton = createElement("button", "Contact");
-contactTabButton.id = "contact-tab-btn";
+const tabButtonObjectsList = [
+  {
+    buttonText: "History",
+    buttonId: "history-tab-btn",
+    connectedPage: openHistoryPage(),
+  },
+  {
+    buttonText: "Menu",
+    buttonId: "menu-tab-btn",
+    connectedPage: openMenuPage(),
+  },
+  {
+    buttonText: "contact",
+    buttonId: "contact-tab-btn",
+    connectedPage: openContactPage(),
+  },
+];
+
 const tabButtonsContainer = createElement("div");
 tabButtonsContainer.id = "tab-btns-container";
 tabButtonsContainer.classList.add(
@@ -35,10 +35,17 @@ tabButtonsContainer.classList.add(
   "tab-buttons-container-bottom"
 );
 
-const tabButtons = [historyTabButton, menuTabButton, contactTabButton];
-for (const button of tabButtons) {
-  tabButtonsContainer.append(button);
-  button.classList.add(
+// const removeAllChildNodes = (id) => () => {
+//   const contentBody = document.getElementById(id);
+//   if (contentBody.hasChildNodes()) contentBody.replaceChildren();
+// };
+
+// const removeAllChildNodesOfContentBody = removeAllChildNodes("content-body");
+
+for (const tabButtonObject of tabButtonObjectsList) {
+  const tabButton = createElement("button", tabButtonObject.buttonText);
+  tabButton.id = tabButtonObject.buttonId;
+  tabButton.classList.add(
     "py-2",
     "px-3",
     "border",
@@ -48,6 +55,10 @@ for (const button of tabButtons) {
     "bg-lightPink",
     "bg-opacity-60"
   );
+  tabButtonsContainer.append(tabButton);
+
+  // Add event handlers to each tab button.
+  tabButton.addEventListener("click", () => {});
 }
 
 const contentTitle = createElement("div", "Content Title");
@@ -77,6 +88,12 @@ contentContainer.append(
 // const updateContenTitleTextContent = updateElementText('content-title');
 // updateContenTitleTextContent('History')
 
+// const removeAllChildNotes = (id)=> () => {
+// const contentBody = document.getElementById(id)
+// if (contentBody.hasChildNodes()) contentBody.replaceChildren();
+// }
+//  if (this.appContainer.hasChildNodes()) this.appContainer.replaceChildren();
+
 // const addClassToElement =
 //   (selector) =>
 //   (...classes) =>
@@ -84,6 +101,11 @@ contentContainer.append(
 
 // Add a functiont to toggle
 // the bg-colors of active and inavtive tab buttons
+// and call it inside of eventhandler for tab-click events.
+
+// Add a function to open each tab and wipe out
+// Call updateElementText to update content Title.
+// the current contents and run the correct tab module.
 
 // openHistoryPage();
 // openMenuPage();
