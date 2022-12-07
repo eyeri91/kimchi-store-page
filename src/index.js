@@ -73,6 +73,6 @@ contentContainer.append(
 // Add a functiont to toggle
 // the bg-colors of active and inavtive tab buttons
 
-// openHistoryPage();
+openHistoryPage();
 // openMenuPage();
-openContactPage();
+// openContactPage();

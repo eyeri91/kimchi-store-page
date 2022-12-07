@@ -71,8 +71,10 @@ function createImageGrid(menuCategory, menuList) {
   const imageGridContainer = createElement("div");
   imageGridContainer.classList.add(
     "grid",
-    "grid-rows-1",
-    "grid-cols-2",
+    "grid-rows-2",
+    "grid-cols-1",
+    "sm:grid-rows-1",
+    "sm:grid-cols-2",
     "gap-4"
   );
 
