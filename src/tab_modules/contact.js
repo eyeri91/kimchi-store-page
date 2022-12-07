@@ -33,16 +33,7 @@ const branchObjectsList = [
 ];
 
 function openContactPage() {
-  // const contentTitle = document.getElementById("content-title");
-  // contentTitle.textContent = "Contact";
-
   const contentBodyContainer = document.getElementById("content-body");
-  contentBodyContainer.classList.add(
-    "flex",
-    "flex-col",
-    "justify-center",
-    "items-center"
-  );
 
   for (const branch of branchObjectsList) {
     const branchDiv = makeSemiTitle(`${branch.title} ` + "Branch");

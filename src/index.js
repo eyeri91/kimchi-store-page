@@ -35,6 +35,7 @@ tabButtonsContainer.classList.add(
   "tab-buttons-container-bottom"
 );
 
+// # Apply currying to common functions for all tabs.
 const removeAllChildNodes = (id) => () => {
   const contentBody = document.getElementById(id);
   if (contentBody.hasChildNodes()) contentBody.replaceChildren();
@@ -42,11 +43,15 @@ const removeAllChildNodes = (id) => () => {
 
 const removeAllChildNodesOfContentBody = removeAllChildNodes("content-body");
 
-// # Apply currying to common functions for all tabs.
 const updateElementText = (id) => (text) =>
   (document.getElementById(id).textContent = text);
 
 const updateContenTitleTextContent = updateElementText("content-title");
+
+// const addClassToElement =
+//   (selector) =>
+//   (...classes) =>
+//     document.querySelector(selector).classList.add(...classes);
 
 const contentTitle = createElement("div", "Content Title");
 contentTitle.id = "content-title";
@@ -60,7 +65,13 @@ contentTitle.classList.add(
 
 const contentBodyContainer = createElement("div");
 contentBodyContainer.id = "content-body";
-contentBodyContainer.classList.add("mt-4");
+contentBodyContainer.classList.add(
+  "mt-4",
+  "flex",
+  "flex-col",
+  "justify-center",
+  "items-center"
+);
 
 contentContainer.append(
   tabButtonsContainer,
@@ -91,31 +102,8 @@ for (const tabButtonObject of tabButtonObjectsList) {
   });
 }
 
-// # Apply currying to common functions for all tabs.
-// const updateElementText = (id) => (text) =>
-//   (document.getElementById(id).textContent = text);
-
-// const updateContenTitleTextContent = updateElementText('content-title');
-// updateContenTitleTextContent('History')
-
-// const removeAllChildNotes = (id)=> () => {
-// const contentBody = document.getElementById(id)
-// if (contentBody.hasChildNodes()) contentBody.replaceChildren();
-// }
-//  if (this.appContainer.hasChildNodes()) this.appContainer.replaceChildren();
-
-// const addClassToElement =
-//   (selector) =>
-//   (...classes) =>
-//     document.querySelector(selector).classList.add(...classes);
-
 // Add a functiont to toggle
 // the bg-colors of active and inavtive tab buttons
 // and call it inside of eventhandler for tab-click events.
 
-// Add a function to open each tab and wipe out
-// Call updateElementText to update content Title.
-
 openHistoryPage();
-// openMenuPage();
-// openContactPage();
