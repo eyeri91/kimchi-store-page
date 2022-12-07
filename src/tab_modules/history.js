@@ -2,6 +2,8 @@ import { createElement, getImageSourceAndStyle } from "../utils/utility";
 import kimchiHistoryImg from "../imgs/kimchi-history.jpg";
 
 function openHistoryPage() {
+  // Eventually take out these lines of code to index.js and put them under
+  // a function that changes the tab.
   const contentTitle = document.getElementById("content-title");
   contentTitle.textContent = "History";
 
