@@ -7,7 +7,7 @@ export function createElement(elementType, elementText = "") {
 export function makeSemiTitle(semiTitleName) {
   const semiTitleCotainer = createElement("div", semiTitleName);
   semiTitleCotainer.classList.add(
-    "text-lg",
+    "text-xl",
     "border-b",
     "border-dotted",
     "border-neutral-400",
