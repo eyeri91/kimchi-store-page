@@ -10,17 +10,17 @@ const tabButtonObjectsList = [
   {
     buttonText: "History",
     buttonId: "history-tab-btn",
-    connectedPage: openHistoryPage(),
+    connectedPage: () => openHistoryPage(),
   },
   {
     buttonText: "Menu",
     buttonId: "menu-tab-btn",
-    connectedPage: openMenuPage(),
+    connectedPage: () => openMenuPage(),
   },
   {
     buttonText: "contact",
     buttonId: "contact-tab-btn",
-    connectedPage: openContactPage(),
+    connectedPage: () => openContactPage(),
   },
 ];
 
@@ -35,31 +35,12 @@ tabButtonsContainer.classList.add(
   "tab-buttons-container-bottom"
 );
 
-// const removeAllChildNodes = (id) => () => {
-//   const contentBody = document.getElementById(id);
-//   if (contentBody.hasChildNodes()) contentBody.replaceChildren();
-// };
+const removeAllChildNodes = (id) => () => {
+  const contentBody = document.getElementById(id);
+  if (contentBody.hasChildNodes()) contentBody.replaceChildren();
+};
 
-// const removeAllChildNodesOfContentBody = removeAllChildNodes("content-body");
-
-for (const tabButtonObject of tabButtonObjectsList) {
-  const tabButton = createElement("button", tabButtonObject.buttonText);
-  tabButton.id = tabButtonObject.buttonId;
-  tabButton.classList.add(
-    "py-2",
-    "px-3",
-    "border",
-    "rounded-t-md",
-    "border-solid",
-    "border-yellow-700",
-    "bg-lightPink",
-    "bg-opacity-60"
-  );
-  tabButtonsContainer.append(tabButton);
-
-  // Add event handlers to each tab button.
-  tabButton.addEventListener("click", () => {});
-}
+const removeAllChildNodesOfContentBody = removeAllChildNodes("content-body");
 
 const contentTitle = createElement("div", "Content Title");
 contentTitle.id = "content-title";
@@ -80,6 +61,28 @@ contentContainer.append(
   contentTitle,
   contentBodyContainer
 );
+
+for (const tabButtonObject of tabButtonObjectsList) {
+  const tabButton = createElement("button", tabButtonObject.buttonText);
+  tabButton.id = tabButtonObject.buttonId;
+  tabButton.classList.add(
+    "py-2",
+    "px-3",
+    "border",
+    "rounded-t-md",
+    "border-solid",
+    "border-yellow-700",
+    "bg-lightPink",
+    "bg-opacity-60"
+  );
+  tabButtonsContainer.append(tabButton);
+
+  // Add event handlers to each tab button.
+  tabButton.addEventListener("click", () => {
+    removeAllChildNodesOfContentBody();
+    tabButtonObject.connectedPage();
+  });
+}
 
 // # Apply currying to common functions for all tabs.
 // const updateElementText = (id) => (text) =>
@@ -107,6 +110,6 @@ contentContainer.append(
 // Call updateElementText to update content Title.
 // the current contents and run the correct tab module.
 
-// openHistoryPage();
+openHistoryPage();
 // openMenuPage();
-openContactPage();
+// openContactPage();
