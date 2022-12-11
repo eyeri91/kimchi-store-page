@@ -18,7 +18,7 @@ function openHistoryPage() {
   contentBodyContainer.append(storeHistoryParagraph);
 
   const historyTabButton = document.getElementById("history-tab-btn");
-  historyTabButton.classList.add("clicked-tab-button-bg-color");
+  historyTabButton.classList.add("bg-cream", "bg-opacity-40");
 }
 
 export default openHistoryPage;

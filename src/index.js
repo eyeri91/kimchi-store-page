@@ -106,10 +106,10 @@ for (const tabButtonObject of tabButtonObjectsList) {
 function toggleTabButtonColor(tabButton) {
   for (const button of tabButtonObjectsList) {
     if (button.buttonId === tabButton.id) {
-      tabButton.classList.add("clicked-tab-button-bg-color");
+      tabButton.classList.add("bg-cream", "bg-opacity-40");
     } else {
       const otherButton = document.getElementById(button.buttonId);
-      otherButton.classList.remove("clicked-tab-button-bg-color");
+      otherButton.classList.remove("bg-cream", "bg-opacity-40");
     }
   }
 }
