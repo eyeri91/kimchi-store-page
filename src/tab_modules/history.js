@@ -16,6 +16,9 @@ function openHistoryPage() {
   );
   storeHistoryParagraph.classList.add("my-3", "px-2", "w-3/4");
   contentBodyContainer.append(storeHistoryParagraph);
+
+  const historyTabButton = document.getElementById("history-tab-btn");
+  historyTabButton.classList.add("clicked-tab-button-bg-color");
 }
 
 export default openHistoryPage;
