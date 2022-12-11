@@ -16,16 +16,7 @@ const nonCabbageKimchiList = ["Kkakdugi", "Pa-kimchi"];
 const otherDishesList = ["Vegetarian", "Non-vegetarian"];
 
 function openMenuPage() {
-  const contentTitle = document.getElementById("content-title");
-  contentTitle.textContent = " Menu";
-
   const contentBodyContainer = document.getElementById("content-body");
-  contentBodyContainer.classList.add(
-    "flex",
-    "flex-col",
-    "justify-center",
-    "items-center"
-  );
 
   const cabbageKimchiTitleContainer = makeSemiTitle("Cabbage Kimchi");
   cabbageKimchiTitleContainer.classList.remove("mt-3");
