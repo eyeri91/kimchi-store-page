@@ -97,6 +97,7 @@ for (const tabButtonObject of tabButtonObjectsList) {
   // Add event handlers to each tab button.
   tabButton.addEventListener("click", () => {
     removeAllChildNodesOfContentBody();
+    toggleTabButtonColor(tabButton);
     updateContenTitleTextContent(tabButtonObject.buttonText);
     tabButtonObject.connectedPage();
   });
@@ -105,5 +106,19 @@ for (const tabButtonObject of tabButtonObjectsList) {
 // Add a functiont to toggle
 // the bg-colors of active and inavtive tab buttons
 // and call it inside of eventhandler for tab-click events.
+
+// check the buttonId -> a button with the same Id gets the class
+// The rest remove the class.
+
+function toggleTabButtonColor(tabButton) {
+  for (const button of tabButtonObjectsList) {
+    if (button.buttonId === tabButton.id) {
+      tabButton.classList.add("clicked-tab-button-bg-color");
+    } else {
+      const otherButton = document.getElementById(button.buttonId);
+      otherButton.classList.remove("clicked-tab-button-bg-color");
+    }
+  }
+}
 
 openHistoryPage();
