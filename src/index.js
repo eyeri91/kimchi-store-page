@@ -18,7 +18,7 @@ const tabButtonObjectsList = [
     connectedPage: () => openMenuPage(),
   },
   {
-    buttonText: "contact",
+    buttonText: "Contact",
     buttonId: "contact-tab-btn",
     connectedPage: () => openContactPage(),
   },
@@ -53,7 +53,7 @@ const updateContenTitleTextContent = updateElementText("content-title");
 //   (...classes) =>
 //     document.querySelector(selector).classList.add(...classes);
 
-const contentTitle = createElement("div", "Content Title");
+const contentTitle = createElement("div", "History");
 contentTitle.id = "content-title";
 contentTitle.classList.add(
   "text-2xl",
