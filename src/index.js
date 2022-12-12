@@ -1,6 +1,6 @@
 import "./style.css";
 import { createElement } from "./utils/utility";
-import openHistoryPage from "./tab_modules/history";
+import openHomePage from "./tab_modules/home";
 import openMenuPage from "./tab_modules/menu";
 import openContactPage from "./tab_modules/contact";
 
@@ -8,9 +8,9 @@ const contentContainer = document.getElementById("content");
 
 const tabButtonObjectsList = [
   {
-    buttonText: "History",
-    buttonId: "history-tab-btn",
-    connectedPage: () => openHistoryPage(),
+    buttonText: "Home",
+    buttonId: "home-tab-btn",
+    connectedPage: () => openHomePage(),
   },
   {
     buttonText: "Menu",
@@ -53,7 +53,7 @@ const updateContenTitleTextContent = updateElementText("content-title");
 //   (...classes) =>
 //     document.querySelector(selector).classList.add(...classes);
 
-const contentTitle = createElement("div", "History");
+const contentTitle = createElement("div", "Home");
 contentTitle.id = "content-title";
 contentTitle.classList.add(
   "text-2xl",
@@ -114,4 +114,4 @@ function toggleTabButtonColor(tabButton) {
   }
 }
 
-openHistoryPage();
+openHomePage();
