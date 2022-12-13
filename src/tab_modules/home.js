@@ -1,4 +1,4 @@
-import { createElement, getImageSourceAndStyle } from "../utils/utility";
+import { createElement, getImageSourceAndStyle } from "../utils/utility.js";
 import kimchiHomeImg from "../imgs/kimchi-history.jpg";
 
 function openHomePage() {

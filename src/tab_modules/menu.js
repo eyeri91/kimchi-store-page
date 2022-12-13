@@ -2,7 +2,7 @@ import {
   createElement,
   makeSemiTitle,
   getImageSourceAndStyle,
-} from "../utils/utility";
+} from "../utils/utility.js";
 
 import cabbageKimchi1 from "../imgs/cab-baechu-kimchi.jpg";
 import cabbageKimchi2 from "../imgs/cab-dongchimi.jpg";

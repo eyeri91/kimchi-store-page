@@ -1,8 +1,8 @@
 import "./style.css";
-import { createElement } from "./utils/utility";
-import openHomePage from "./tab_modules/home";
-import openMenuPage from "./tab_modules/menu";
-import openContactPage from "./tab_modules/contact";
+import { createElement } from "./utils/utility.js";
+import openHomePage from "./tab_modules/home.js";
+import openMenuPage from "./tab_modules/menu.js";
+import openContactPage from "./tab_modules/contact.js";
 
 const contentContainer = document.getElementById("content");
 

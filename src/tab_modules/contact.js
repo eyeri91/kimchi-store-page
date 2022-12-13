@@ -2,7 +2,7 @@ import {
   createElement,
   makeSemiTitle,
   getImageSourceAndStyle,
-} from "../utils/utility";
+} from "../utils/utility.js";
 
 import dubaiImage from "../imgs/dubai.jpg";
 import seoulImage from "../imgs/seoul.jpg";
