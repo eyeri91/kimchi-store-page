@@ -1,11 +1,9 @@
-# restaurant-page project
+# Kimchi store page
 
 Click to see [[Live view](https://eyeri91.github.io/restaurant-page/)]
 
-# My Kimchi is Better Than Yours 
 
-
-This project is from [the Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-restaurant-page).
+This project is from [the Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-restaurant-page)
 
 ## Learning goals
 
