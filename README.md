@@ -1,6 +1,6 @@
 # Kimchi store page
 
-Click to see [[Live view](https://eyeri91.github.io/restaurant-page/)]
+Click to see [[Live view](https://eyeri91.github.io/kimchi-store-page/)]
 
 
 This project is from [the Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-restaurant-page)
